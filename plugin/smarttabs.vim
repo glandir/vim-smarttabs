@@ -68,7 +68,7 @@ if exists('g:ctab_enable_default_filetype_maps') && ctab_enable_default_filetype
     if (&filetype =~ '^\(cpp\|idl\)$' )
       imap <silent> <buffer> <expr> <m-;> CTabAlignTo(20).'//'
       imap <silent> <buffer> <expr> <m-s-;> CTabAlignTo(30).'//'
-      imap <silent> <buffer> บ <m-s-;>
+      imap <silent> <buffer> ยบ <m-s-;>
     elseif &filetype == 'c'
       imap <expr> <silent> <buffer> <m-;> CTabAlignTo(10).'/*  */<left><left><left>'
     endif
@@ -273,7 +273,7 @@ if ! exists('g:ctab_disable_checkalign') || g:ctab_disable_checkalign==0
   endfun
 
   "exe 'inoremap '.s:buff_map.'<silent> <CR> <CR><c-r>=<SID>CheckAlign(line(''.''))."\<lt>END>"<CR>'
-  exe 'inoremap '.s:buff_map.'<silent> <expr> <CR> <SID>CheckCR()'
+  "exe 'inoremap '.s:buff_map.'<silent> <expr> <CR> <SID>CheckCR()'
   exe 'nnoremap '.s:buff_map.'<silent> o o<c-r>=<SID>CheckAlign(line(''.''))."\<lt>END>"<CR>'
   exe 'nnoremap '.s:buff_map.'<silent> O O<c-r>=<SID>CheckAlign(line(''.''))."\<lt>END>"<CR>'
 
