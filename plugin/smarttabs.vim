@@ -105,7 +105,7 @@ endif
 fun! s:InsertSmartTab()
   " Clear the status
   echo ''
-  if strpart(getline('.'),0,col('.')-1) =~'^\s*$'
+  if strpart(getline('.'),0,col('.')-1) =~'^\t*$'
     if exists('b:ctab_hook') && b:ctab_hook != ''
       exe 'return '.b:ctab_hook
     elseif exists('g:ctab_hook') && g:ctab_hook != ''
