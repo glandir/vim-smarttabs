@@ -345,5 +345,8 @@ endfun
 "   Bang (!) causes trailing whitespace to be gobbled.
 com! -nargs=? -range=% -bang -bar RetabIndent call <SID>RetabIndent(<q-bang>,<line1>, <line2>, <q-args> )
 
+function SmartTab()
+  return s:InsertSmartTab()
+endfun
 
 " vim: sts=2 sw=2 et
